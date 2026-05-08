@@ -19,10 +19,11 @@ hamburger.addEventListener('click', () => {
   navLinks.style.top = '70px';
   navLinks.style.left = '0';
   navLinks.style.right = '0';
-  navLinks.style.background = 'rgba(15,15,19,0.98)';
+  navLinks.style.background = 'rgba(10,10,26,0.92)';
+  navLinks.style.backdropFilter = 'blur(20px)';
   navLinks.style.padding = '20px';
   navLinks.style.gap = '20px';
-  navLinks.style.borderTop = '1px solid rgba(255,255,255,0.08)';
+  navLinks.style.borderTop = '1px solid rgba(255,255,255,0.1)';
 });
 
 // ===== SMOOTH SCROLL FOR NAV LINKS =====
@@ -32,7 +33,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const target = document.querySelector(link.getAttribute('href'));
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
-      // Close mobile menu if open
       navLinks.style.display = 'none';
     }
   });

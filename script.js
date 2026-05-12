@@ -20,7 +20,10 @@ function lerp(a, b, n) { return (1 - n) * a + n * b; }
   requestAnimationFrame(animateCursor);
 })();
 
-document.querySelectorAll('a, button, .skill-glass, .project-glass, .cert-glass, .stat-glass, .info-glass, .contact-item, .soc-btn, .activity-glass, .interest-pill').forEach(el => {
+// Cursor grows on all clickable elements
+document.querySelectorAll(
+  'a, button, .skill-glass, .project-glass, .cert-glass, .stat-glass, .info-glass, .activity-glass, .interest-pill, .soc-btn, .float-badge, .metric-link'
+).forEach(el => {
   el.addEventListener('mouseenter', () => { cursor.classList.add('hovered'); follower.classList.add('hovered'); });
   el.addEventListener('mouseleave', () => { cursor.classList.remove('hovered'); follower.classList.remove('hovered'); });
 });
@@ -111,10 +114,8 @@ hamburger.addEventListener('click', () => {
     display:        open ? 'none' : 'flex',
     flexDirection:  'column',
     position:       'absolute',
-    top:            '70px',
-    left:           '0',
-    right:          '0',
-    background:     'rgba(0,0,0,0.96)',
+    top:            '70px', left:'0', right:'0',
+    background:     'rgba(0,0,0,0.97)',
     backdropFilter: 'blur(32px)',
     padding:        '24px 32px',
     gap:            '24px',
@@ -123,13 +124,18 @@ hamburger.addEventListener('click', () => {
 });
 
 // ══════════════════════════════
-// 5. SMOOTH SCROLL
+// 5. SMOOTH SCROLL for anchor links
 // ══════════════════════════════
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
+    const href = link.getAttribute('href');
+    if (href === '#') return;
     e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) { target.scrollIntoView({ behavior: 'smooth' }); navLinks.style.display = 'none'; }
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      navLinks.style.display = 'none';
+    }
   });
 });
 
@@ -155,11 +161,9 @@ function animateCounter(el) {
     if (current >= target) clearInterval(t);
   }, 16);
 }
-
 const counterObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); } });
 }, { threshold: 0.5 });
-
 document.querySelectorAll('.metric-num, .stat-n').forEach(el => counterObs.observe(el));
 
 // ══════════════════════════════
@@ -174,7 +178,6 @@ const barObs = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.3 });
-
 document.querySelectorAll('.skill-glass').forEach(el => barObs.observe(el));
 
 // ══════════════════════════════
@@ -197,7 +200,7 @@ document.querySelectorAll('.project-glass').forEach(card => {
 // ══════════════════════════════
 // 10. MAGNETIC BUTTONS
 // ══════════════════════════════
-document.querySelectorAll('.btn-glass, .btn-ghost-pure, .soc-btn').forEach(btn => {
+document.querySelectorAll('.btn-glass, .btn-ghost-pure, .soc-btn, .footer-soc').forEach(btn => {
   btn.addEventListener('mousemove', e => {
     const r = btn.getBoundingClientRect();
     const x = e.clientX - r.left - r.width  / 2;
@@ -214,7 +217,7 @@ document.querySelectorAll('.btn-glass, .btn-ghost-pure, .soc-btn').forEach(btn =
 // ══════════════════════════════
 // 11. GLASS SPOTLIGHT
 // ══════════════════════════════
-document.querySelectorAll('.glass-card, .skill-glass, .project-glass, .cert-glass, .info-glass, .stat-glass').forEach(card => {
+document.querySelectorAll('.glass-card, .skill-glass, .project-glass, .cert-glass, .info-glass, .stat-glass, .activity-glass').forEach(card => {
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect();
     const x = ((e.clientX - r.left) / r.width)  * 100;
@@ -225,32 +228,46 @@ document.querySelectorAll('.glass-card, .skill-glass, .project-glass, .cert-glas
 });
 
 // ══════════════════════════════
-// 12. CONTACT FORM
+// 12. CONTACT FORM — sends via mailto
 // ══════════════════════════════
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
+    const name    = document.getElementById('fname').value;
+    const email   = document.getElementById('femail').value;
+    const subject = document.getElementById('fsubject').value || 'Portfolio Inquiry';
+    const message = document.getElementById('fmsg').value;
+
+    // Opens Gmail in a new browser tab — NOT Outlook or any mail app
+    const gmailLink = `https://mail.google.com/mail/?view=cm&to=devmistri777@gmail.com,dekkworkbase@gmail.com&su=${encodeURIComponent(subject + ' — from ' + name)}&body=${encodeURIComponent('From: ' + name + '\nReply to: ' + email + '\n\n' + message)}`;
+
     const btn     = contactForm.querySelector('.btn-submit');
     const btnText = document.getElementById('btnText');
     const btnIcon = document.getElementById('btnIcon');
-    btnText.textContent = 'Sending...';
+
+    btnText.textContent = 'Opening Gmail...';
     btnIcon.className   = 'fa-solid fa-circle-notch fa-spin';
     btn.disabled = true;
+
+    // Open Gmail compose in a new browser tab
+    window.open(gmailLink, '_blank');
+
     setTimeout(() => {
-      btnText.textContent  = 'Message Sent!';
+      btnText.textContent  = 'Gmail Opened! ✓';
       btnIcon.className    = 'fa-solid fa-check';
       btn.style.background = 'rgba(74,222,128,0.1)';
       btn.style.borderColor = 'rgba(74,222,128,0.3)';
-      contactForm.reset();
+
       setTimeout(() => {
         btnText.textContent  = 'Send Message';
         btnIcon.className    = 'fa-solid fa-paper-plane';
         btn.style.background = '';
         btn.style.borderColor = '';
         btn.disabled = false;
+        contactForm.reset();
       }, 3000);
-    }, 1800);
+    }, 800);
   });
 }
 

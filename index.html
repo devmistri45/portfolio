@@ -15,9 +15,9 @@
   <canvas id="particleCanvas"></canvas>
   <div class="grid-overlay"></div>
 
-  <!-- NAVBAR -->
+  <!-- ═══════ NAVBAR ═══════ -->
   <nav class="navbar" id="navbar">
-    <div class="nav-logo"><span class="logo-bracket">[</span>DM<span class="logo-bracket">]</span></div>
+    <a href="#home" class="nav-logo"><span class="logo-bracket">[</span>DM<span class="logo-bracket">]</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home"           class="nav-link">Home</a></li>
       <li><a href="#about"          class="nav-link">About</a></li>
@@ -27,38 +27,66 @@
       <li><a href="#contact"        class="nav-link">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <div class="status-dot"><span class="pulse"></span>Open to Internship</div>
+      <!-- Clicking status dot opens LinkedIn -->
+      <a href="https://www.linkedin.com/in/dev-mistri-8181b2330/?skipRedirect=true" target="_blank" class="status-dot">
+        <span class="pulse"></span>Open to Internship
+      </a>
       <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ═══════ HERO ═══════ -->
   <section class="hero" id="home">
     <div class="hero-content">
       <div class="hero-tag">
         <span class="tag-line"></span>
-        <span>Cybersecurity &amp; AI Enthusiast · Gujarat, India</span>
+        <!-- Clicking location opens Google Maps -->
+        <a href="https://maps.google.com/?q=Gujarat,India" target="_blank" class="tag-link">
+          <i class="fa-solid fa-location-dot"></i> Gujarat, India
+        </a>
+        <span class="tag-sep">·</span>
+        <!-- Clicking university opens Ganpat Uni -->
+        <a href="https://www.ganpatuniversity.ac.in" target="_blank" class="tag-link">
+          <i class="fa-solid fa-building-columns"></i> Ganpat University
+        </a>
         <span class="tag-line"></span>
       </div>
+
       <h1 class="hero-name">
         <span class="name-line">Hello, I'm</span>
-        <span class="name-line accent">Dev Mistri</span>
+        <!-- Clicking name scrolls to about -->
+        <a href="#about" class="name-line accent name-link">Dev Mistri</a>
       </h1>
+
       <p class="hero-sub">
-        Third-year B.Tech IT student at <em>Ganpat University</em> passionate about
-        <em>Ethical Hacking</em>, <em>Network Security</em>, and solving real-world problems
-        through AI-driven security solutions.
+        Third-year B.Tech IT student passionate about
+        <!-- Each keyword links to relevant section/site -->
+        <a href="#skills" class="inline-link">Ethical Hacking</a>,
+        <a href="#skills" class="inline-link">Network Security</a>, and solving real-world problems
+        through <a href="#skills" class="inline-link">AI-driven security</a> solutions.
       </p>
+
       <div class="hero-actions">
         <a href="#projects" class="btn-glass btn-glow"><span>View Projects</span><i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#contact"  class="btn-ghost-pure"><span>Let's Connect</span></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=devmistri777@gmail.com,dellworkbase@gmail.com" target="_blank" class="btn-ghost-pure"><span>Email Me</span><i class="fa-brands fa-google"></i></a>
       </div>
+
       <div class="hero-metrics">
-        <div class="metric"><span class="metric-num" data-target="7">0</span><span class="metric-label">Certifications</span></div>
+        <!-- Each metric links to its section -->
+        <a href="#certifications" class="metric metric-link">
+          <span class="metric-num" data-target="7">0</span>
+          <span class="metric-label">Certifications</span>
+        </a>
         <div class="metric-divider"></div>
-        <div class="metric"><span class="metric-num" data-target="2">0</span><span class="metric-label">Projects</span></div>
+        <a href="#projects" class="metric metric-link">
+          <span class="metric-num" data-target="2">0</span>
+          <span class="metric-label">Projects</span>
+        </a>
         <div class="metric-divider"></div>
-        <div class="metric"><span class="metric-num" data-target="3">0</span><span class="metric-label">Yrs B.Tech</span></div>
+        <a href="#about" class="metric metric-link">
+          <span class="metric-num" data-target="3">0</span>
+          <span class="metric-label">Yrs B.Tech</span>
+        </a>
       </div>
     </div>
 
@@ -66,18 +94,21 @@
       <div class="glass-orb-wrap">
         <div class="glass-orb">
           <div class="orb-inner">
-            <div class="orb-avatar">
+            <!-- Clicking orb goes to LinkedIn -->
+            <a href="https://www.linkedin.com/in/dev-mistri-8181b2330/?skipRedirect=true" target="_blank" class="orb-avatar">
               <i class="fa-solid fa-shield-halved"></i>
               <span>Dev Mistri</span>
-            </div>
+              <span class="orb-sub">View LinkedIn →</span>
+            </a>
           </div>
           <div class="orb-ring ring-1"></div>
           <div class="orb-ring ring-2"></div>
           <div class="orb-ring ring-3"></div>
-          <div class="float-badge badge-1"><i class="fa-solid fa-terminal"></i> Kali Linux</div>
-          <div class="float-badge badge-2"><i class="fa-brands fa-google"></i> GCP</div>
-          <div class="float-badge badge-3"><i class="fa-solid fa-brain"></i> Gen AI</div>
-          <div class="float-badge badge-4"><i class="fa-solid fa-lock"></i> CyberSec</div>
+          <!-- Each floating badge links to relevant skill/tool -->
+          <a href="https://www.kali.org" target="_blank" class="float-badge badge-1"><i class="fa-solid fa-terminal"></i> Kali Linux</a>
+          <a href="https://cloud.google.com" target="_blank" class="float-badge badge-2"><i class="fa-brands fa-google"></i> GCP</a>
+          <a href="#skills" class="float-badge badge-3"><i class="fa-solid fa-brain"></i> Gen AI</a>
+          <a href="#skills" class="float-badge badge-4"><i class="fa-solid fa-lock"></i> CyberSec</a>
         </div>
       </div>
     </div>
@@ -85,7 +116,7 @@
     <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ═══════ ABOUT ═══════ -->
   <section class="about section-fade" id="about">
     <div class="section-header">
       <span class="section-num">01</span>
@@ -99,8 +130,9 @@
         <div class="about-avatar-sm"><i class="fa-solid fa-user-secret"></i></div>
         <p class="about-bio">
           I'm <strong>Dev Mistri</strong>, a third-year B.Tech Information Technology student at
-          <strong>Ganpat University, Gujarat</strong>. My curiosity lives at the intersection of
-          <strong>Cybersecurity</strong> and <strong>Artificial Intelligence</strong>.
+          <!-- University name links to uni website -->
+          <a href="https://www.ganpatuniversity.ac.in" target="_blank" class="text-link">Ganpat University, Gujarat</a>.
+          My curiosity lives at the intersection of <strong>Cybersecurity</strong> and <strong>Artificial Intelligence</strong>.
         </p>
         <p class="about-bio">
           Strong foundation in ethical hacking, network security, and cloud technologies. Passionate
@@ -113,74 +145,88 @@
           learning and contributing to innovative and secure technological solutions.
         </p>
         <div class="about-tags">
-          <span class="tag">Ethical Hacking</span>
-          <span class="tag">Network Security</span>
-          <span class="tag">Cryptography</span>
-          <span class="tag">Generative AI</span>
-          <span class="tag">Cloud Security</span>
-          <span class="tag">Figma / UI·UX</span>
-          <span class="tag">Prompt Engineering</span>
+          <!-- Each tag links to skills section -->
+          <a href="#skills" class="tag">Ethical Hacking</a>
+          <a href="#skills" class="tag">Network Security</a>
+          <a href="#skills" class="tag">Cryptography</a>
+          <a href="#skills" class="tag">Generative AI</a>
+          <a href="#skills" class="tag">Cloud Security</a>
+          <a href="#skills" class="tag">Figma / UI·UX</a>
+          <a href="#skills" class="tag">Prompt Engineering</a>
         </div>
-        <a href="Dev_s_CV.pdf" class="btn-glass btn-sm-glass" download>
+        <!-- CV download button -->
+        <a href="Dev_s_CV.pdf" class="btn-glass btn-sm-glass" download="Dev_Mistri_CV.pdf">
           <i class="fa-solid fa-download"></i> Download CV
         </a>
       </div>
 
       <div class="about-right">
         <div class="info-grid">
+          <!-- Each info card is clickable -->
           <div class="info-glass reveal-up" style="--delay:0.1s">
             <span class="info-icon"><i class="fa-solid fa-user"></i></span>
             <span class="info-key">Full Name</span>
             <span class="info-val">Dev Mistri</span>
           </div>
-          <div class="info-glass reveal-up" style="--delay:0.2s">
+
+          <!-- LinkedIn card → opens LinkedIn -->
+          <a href="https://www.linkedin.com/in/dev-mistri-8181b2330/?skipRedirect=true" target="_blank" class="info-glass info-link reveal-up" style="--delay:0.2s">
             <span class="info-icon"><i class="fa-brands fa-linkedin"></i></span>
-            <span class="info-key">LinkedIn</span>
-            <span class="info-val">linkedin.com/in/devmistri</span>
-          </div>
-          <div class="info-glass reveal-up" style="--delay:0.3s">
+            <span class="info-key">LinkedIn ↗</span>
+            <span class="info-val">linkedin.com/in/dev-mistri</span>
+          </a>
+
+          <!-- Location card → opens Google Maps -->
+          <a href="https://maps.google.com/?q=Gujarat,India" target="_blank" class="info-glass info-link reveal-up" style="--delay:0.3s">
             <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
-            <span class="info-key">Location</span>
+            <span class="info-key">Location ↗</span>
             <span class="info-val">Gujarat, India</span>
-          </div>
-          <div class="info-glass reveal-up" style="--delay:0.4s">
+          </a>
+
+          <!-- Degree card → opens uni -->
+          <a href="https://www.ganpatuniversity.ac.in" target="_blank" class="info-glass info-link reveal-up" style="--delay:0.4s">
             <span class="info-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-            <span class="info-key">Degree</span>
+            <span class="info-key">Degree ↗</span>
             <span class="info-val">B.Tech IT · 2023–2027</span>
-          </div>
-          <div class="info-glass reveal-up" style="--delay:0.5s">
+          </a>
+
+          <!-- University card -->
+          <a href="https://www.ganpatuniversity.ac.in" target="_blank" class="info-glass info-link reveal-up" style="--delay:0.5s">
             <span class="info-icon"><i class="fa-solid fa-building-columns"></i></span>
-            <span class="info-key">University</span>
+            <span class="info-key">University ↗</span>
             <span class="info-val">Ganpat University</span>
-          </div>
-          <div class="info-glass reveal-up" style="--delay:0.6s">
+          </a>
+
+          <!-- Status card → opens LinkedIn -->
+          <a href="https://www.linkedin.com/in/dev-mistri-8181b2330/?skipRedirect=true" target="_blank" class="info-glass info-link reveal-up" style="--delay:0.6s">
             <span class="info-icon"><i class="fa-solid fa-circle-check"></i></span>
-            <span class="info-key">Status</span>
+            <span class="info-key">Status ↗</span>
             <span class="info-val available-text">Seeking Internship</span>
-          </div>
+          </a>
         </div>
 
         <div class="stat-row">
-          <div class="stat-glass reveal-up" style="--delay:0.5s">
+          <a href="#certifications" class="stat-glass reveal-up" style="--delay:0.5s">
             <span class="stat-n" data-target="7">0</span><span class="stat-l">Certs</span>
-          </div>
-          <div class="stat-glass reveal-up" style="--delay:0.6s">
+          </a>
+          <a href="#projects" class="stat-glass reveal-up" style="--delay:0.6s">
             <span class="stat-n" data-target="2">0</span><span class="stat-l">Projects</span>
-          </div>
-          <div class="stat-glass reveal-up" style="--delay:0.7s">
+          </a>
+          <a href="https://www.simplilearn.com" target="_blank" class="stat-glass reveal-up" style="--delay:0.7s">
             <span class="stat-n" data-target="3">0</span><span class="stat-l">Platforms</span>
-          </div>
+          </a>
         </div>
 
         <div class="edu-wrap">
           <h4 class="edu-label">Education</h4>
-          <div class="edu-item reveal-up" style="--delay:0.3s">
+          <!-- Education items link to university websites -->
+          <a href="https://www.ganpatuniversity.ac.in" target="_blank" class="edu-item edu-link reveal-up" style="--delay:0.3s">
             <div class="edu-dot"></div>
             <div class="edu-text">
-              <strong>B.Tech — Information Technology</strong>
+              <strong>B.Tech — Information Technology ↗</strong>
               <span>Ganpat University, Gujarat · 2023–2027</span>
             </div>
-          </div>
+          </a>
           <div class="edu-item reveal-up" style="--delay:0.4s">
             <div class="edu-dot"></div>
             <div class="edu-text">
@@ -193,7 +239,7 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- ═══════ SKILLS ═══════ -->
   <section class="skills section-fade" id="skills">
     <div class="section-header">
       <span class="section-num">02</span>
@@ -201,46 +247,75 @@
       <div class="section-line"></div>
     </div>
     <div class="skills-grid">
-      <div class="skill-glass reveal-up" style="--delay:0s">
-        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-skull-crossbones"></i></div><div class="skill-info"><span class="skill-name">Ethical Hacking</span><span class="skill-pct">85%</span></div></div>
+
+      <!-- Each skill card links to a learning resource -->
+      <a href="https://www.kali.org/docs/" target="_blank" class="skill-glass reveal-up" style="--delay:0s">
+        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-skull-crossbones"></i></div>
+        <div class="skill-info"><span class="skill-name">Ethical Hacking</span><span class="skill-pct">85%</span></div></div>
         <div class="skill-track"><div class="skill-bar" data-width="85"></div></div>
-      </div>
-      <div class="skill-glass reveal-up" style="--delay:0.1s">
-        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-network-wired"></i></div><div class="skill-info"><span class="skill-name">Network Security</span><span class="skill-pct">80%</span></div></div>
+        <span class="skill-arrow">Learn more ↗</span>
+      </a>
+
+      <a href="https://www.cisco.com/c/en/us/products/security/what-is-network-security.html" target="_blank" class="skill-glass reveal-up" style="--delay:0.1s">
+        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-network-wired"></i></div>
+        <div class="skill-info"><span class="skill-name">Network Security</span><span class="skill-pct">80%</span></div></div>
         <div class="skill-track"><div class="skill-bar" data-width="80"></div></div>
-      </div>
-      <div class="skill-glass reveal-up" style="--delay:0.2s">
-        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-key"></i></div><div class="skill-info"><span class="skill-name">Cryptography</span><span class="skill-pct">75%</span></div></div>
+        <span class="skill-arrow">Learn more ↗</span>
+      </a>
+
+      <a href="https://www.simplilearn.com/tutorials/cryptography-tutorial" target="_blank" class="skill-glass reveal-up" style="--delay:0.2s">
+        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-key"></i></div>
+        <div class="skill-info"><span class="skill-name">Cryptography</span><span class="skill-pct">75%</span></div></div>
         <div class="skill-track"><div class="skill-bar" data-width="75"></div></div>
-      </div>
-      <div class="skill-glass reveal-up" style="--delay:0.3s">
-        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-wifi"></i></div><div class="skill-info"><span class="skill-name">Wireless Attacks / Cyber Defense</span><span class="skill-pct">72%</span></div></div>
+        <span class="skill-arrow">Learn more ↗</span>
+      </a>
+
+      <a href="https://www.aircrack-ng.org" target="_blank" class="skill-glass reveal-up" style="--delay:0.3s">
+        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-wifi"></i></div>
+        <div class="skill-info"><span class="skill-name">Wireless Attacks / Cyber Defense</span><span class="skill-pct">72%</span></div></div>
         <div class="skill-track"><div class="skill-bar" data-width="72"></div></div>
-      </div>
-      <div class="skill-glass reveal-up" style="--delay:0.4s">
-        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-brain"></i></div><div class="skill-info"><span class="skill-name">Generative AI</span><span class="skill-pct">82%</span></div></div>
+        <span class="skill-arrow">Learn more ↗</span>
+      </a>
+
+      <a href="https://gemini.google.com" target="_blank" class="skill-glass reveal-up" style="--delay:0.4s">
+        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-brain"></i></div>
+        <div class="skill-info"><span class="skill-name">Generative AI</span><span class="skill-pct">82%</span></div></div>
         <div class="skill-track"><div class="skill-bar" data-width="82"></div></div>
-      </div>
-      <div class="skill-glass reveal-up" style="--delay:0.5s">
-        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-magnifying-glass-chart"></i></div><div class="skill-info"><span class="skill-name">Prompt Engineering</span><span class="skill-pct">80%</span></div></div>
+        <span class="skill-arrow">Learn more ↗</span>
+      </a>
+
+      <a href="https://www.promptingguide.ai" target="_blank" class="skill-glass reveal-up" style="--delay:0.5s">
+        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <div class="skill-info"><span class="skill-name">Prompt Engineering</span><span class="skill-pct">80%</span></div></div>
         <div class="skill-track"><div class="skill-bar" data-width="80"></div></div>
-      </div>
-      <div class="skill-glass reveal-up" style="--delay:0.6s">
-        <div class="skill-top"><div class="skill-ico"><i class="fa-brands fa-google"></i></div><div class="skill-info"><span class="skill-name">Google Cloud (GCP)</span><span class="skill-pct">70%</span></div></div>
+        <span class="skill-arrow">Learn more ↗</span>
+      </a>
+
+      <a href="https://cloud.google.com" target="_blank" class="skill-glass reveal-up" style="--delay:0.6s">
+        <div class="skill-top"><div class="skill-ico"><i class="fa-brands fa-google"></i></div>
+        <div class="skill-info"><span class="skill-name">Google Cloud (GCP)</span><span class="skill-pct">70%</span></div></div>
         <div class="skill-track"><div class="skill-bar" data-width="70"></div></div>
-      </div>
-      <div class="skill-glass reveal-up" style="--delay:0.7s">
-        <div class="skill-top"><div class="skill-ico"><i class="fa-brands fa-aws"></i></div><div class="skill-info"><span class="skill-name">AWS</span><span class="skill-pct">60%</span></div></div>
+        <span class="skill-arrow">Visit GCP ↗</span>
+      </a>
+
+      <a href="https://aws.amazon.com" target="_blank" class="skill-glass reveal-up" style="--delay:0.7s">
+        <div class="skill-top"><div class="skill-ico"><i class="fa-brands fa-aws"></i></div>
+        <div class="skill-info"><span class="skill-name">AWS</span><span class="skill-pct">60%</span></div></div>
         <div class="skill-track"><div class="skill-bar" data-width="60"></div></div>
-      </div>
-      <div class="skill-glass reveal-up" style="--delay:0.8s">
-        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-pen-ruler"></i></div><div class="skill-info"><span class="skill-name">Figma / UI·UX / Canva</span><span class="skill-pct">72%</span></div></div>
+        <span class="skill-arrow">Visit AWS ↗</span>
+      </a>
+
+      <a href="https://www.figma.com" target="_blank" class="skill-glass reveal-up" style="--delay:0.8s">
+        <div class="skill-top"><div class="skill-ico"><i class="fa-solid fa-pen-ruler"></i></div>
+        <div class="skill-info"><span class="skill-name">Figma / UI·UX / Canva</span><span class="skill-pct">72%</span></div></div>
         <div class="skill-track"><div class="skill-bar" data-width="72"></div></div>
-      </div>
+        <span class="skill-arrow">Open Figma ↗</span>
+      </a>
+
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- ═══════ PROJECTS ═══════ -->
   <section class="projects section-fade" id="projects">
     <div class="section-header">
       <span class="section-num">03</span>
@@ -253,51 +328,64 @@
         <div class="project-top">
           <div class="project-icon-wrap p1"><i class="fa-solid fa-terminal"></i></div>
           <div class="project-links-top">
-            <a href="#" class="icon-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <!-- Replace # with your actual GitHub repo links -->
+            <a href="https://github.com/devmistri45" target="_blank" class="icon-link" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.kali.org/docs/introduction/what-is-kali-linux/" target="_blank" class="icon-link" title="About this tech"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
         <span class="project-cat">Cybersecurity</span>
         <h3 class="project-title">Ethical Hacking Practice Labs</h3>
         <p class="project-desc">Performed penetration testing and vulnerability assessment in virtual lab environments. Simulated real-world attack &amp; defense scenarios using industry-standard tools.</p>
         <div class="project-techs">
-          <span>Kali Linux</span><span>Metasploitable</span><span>Pen Testing</span>
+          <a href="https://www.kali.org" target="_blank" class="tech-tag">Kali Linux ↗</a>
+          <a href="https://sourceforge.net/projects/metasploitable/" target="_blank" class="tech-tag">Metasploitable ↗</a>
+          <span class="tech-tag">Pen Testing</span>
         </div>
+        <a href="https://github.com/devmistri45" target="_blank" class="project-cta">View on GitHub <i class="fa-brands fa-github"></i></a>
       </div>
 
       <div class="project-glass reveal-up" style="--delay:0.15s">
         <div class="project-top">
           <div class="project-icon-wrap p2"><i class="fa-brands fa-google"></i></div>
           <div class="project-links-top">
-            <a href="#" class="icon-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/devmistri45" target="_blank" class="icon-link" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://cloud.google.com/training" target="_blank" class="icon-link" title="Google Cloud Training"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
         <span class="project-cat">Cloud Computing</span>
         <h3 class="project-title">Cloud Learning Projects</h3>
         <p class="project-desc">Hands-on labs on Google Cloud Platform covering compute, storage, and networking basics. Completed as part of the GDG OC UVPCE Cloud Study Jams 2025 program.</p>
         <div class="project-techs">
-          <span>Google Cloud</span><span>Compute</span><span>Networking</span>
+          <a href="https://cloud.google.com" target="_blank" class="tech-tag">Google Cloud ↗</a>
+          <span class="tech-tag">Compute</span>
+          <span class="tech-tag">Networking</span>
         </div>
+        <a href="https://github.com/devmistri45" target="_blank" class="project-cta">View on GitHub <i class="fa-brands fa-github"></i></a>
       </div>
 
       <div class="project-glass reveal-up" style="--delay:0.3s">
         <div class="project-top">
           <div class="project-icon-wrap p3"><i class="fa-solid fa-robot"></i></div>
           <div class="project-links-top">
-            <a href="#" class="icon-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/devmistri45" target="_blank" class="icon-link" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.crowdstrike.com/cybersecurity-101/threat-intelligence/" target="_blank" class="icon-link" title="About AI Threat Detection"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
         <span class="project-cat">AI + Security · In Progress</span>
         <h3 class="project-title">AI in Threat Detection</h3>
         <p class="project-desc">Research project exploring Generative AI and ML models for real-time cybersecurity threat detection and analysis — combining AI Research Tools with cyber defense strategies.</p>
         <div class="project-techs">
-          <span>Gen AI</span><span>ML</span><span>Threat Intel</span>
+          <a href="https://gemini.google.com" target="_blank" class="tech-tag">Gen AI ↗</a>
+          <span class="tech-tag">ML</span>
+          <span class="tech-tag">Threat Intel</span>
         </div>
+        <a href="https://github.com/devmistri45" target="_blank" class="project-cta">View on GitHub <i class="fa-brands fa-github"></i></a>
       </div>
 
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
+  <!-- ═══════ CERTIFICATIONS ═══════ -->
   <section class="certifications section-fade" id="certifications">
     <div class="section-header">
       <span class="section-num">04</span>
@@ -305,53 +393,62 @@
       <div class="section-line"></div>
     </div>
     <div class="certs-grid">
-      <div class="cert-glass reveal-up" style="--delay:0s">
+
+      <!-- Every cert card links to the issuer platform -->
+      <a href="https://gdg.community.dev" target="_blank" class="cert-glass reveal-up" style="--delay:0s">
         <div class="cert-icon"><i class="fa-brands fa-google"></i></div>
-        <div class="cert-body"><span class="cert-issuer">GDG OC UVPCE</span><h4>Google Cloud Study Jams 2025</h4></div>
+        <div class="cert-body"><span class="cert-issuer">GDG OC UVPCE ↗</span><h4>Google Cloud Study Jams 2025</h4></div>
         <span class="cert-year">2025</span>
-      </div>
-      <div class="cert-glass reveal-up" style="--delay:0.1s">
+      </a>
+
+      <a href="https://www.digitalindia.gov.in" target="_blank" class="cert-glass reveal-up" style="--delay:0.1s">
         <div class="cert-icon"><i class="fa-solid fa-flag"></i></div>
-        <div class="cert-body"><span class="cert-issuer">Digital India</span><h4>AI Aware Badge</h4></div>
+        <div class="cert-body"><span class="cert-issuer">Digital India ↗</span><h4>AI Aware Badge</h4></div>
         <span class="cert-year">2026</span>
-      </div>
-      <div class="cert-glass reveal-up" style="--delay:0.2s">
+      </a>
+
+      <a href="https://www.digitalindia.gov.in" target="_blank" class="cert-glass reveal-up" style="--delay:0.2s">
         <div class="cert-icon"><i class="fa-solid fa-star"></i></div>
-        <div class="cert-body"><span class="cert-issuer">Digital India</span><h4>AI Appreciate Badge</h4></div>
+        <div class="cert-body"><span class="cert-issuer">Digital India ↗</span><h4>AI Appreciate Badge</h4></div>
         <span class="cert-year">2026</span>
-      </div>
-      <div class="cert-glass reveal-up" style="--delay:0.3s">
+      </a>
+
+      <a href="https://www.simplilearn.com/ethical-hacking-certification-training" target="_blank" class="cert-glass reveal-up" style="--delay:0.3s">
         <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="cert-body"><span class="cert-issuer">Simplilearn</span><h4>Introduction to Ethical Hacking</h4></div>
+        <div class="cert-body"><span class="cert-issuer">Simplilearn ↗</span><h4>Introduction to Ethical Hacking</h4></div>
         <span class="cert-year">2024</span>
-      </div>
-      <div class="cert-glass reveal-up" style="--delay:0.4s">
+      </a>
+
+      <a href="https://www.simplilearn.com/cryptography-for-beginners-free-course-skillup" target="_blank" class="cert-glass reveal-up" style="--delay:0.4s">
         <div class="cert-icon"><i class="fa-solid fa-key"></i></div>
-        <div class="cert-body"><span class="cert-issuer">Simplilearn</span><h4>Ethical Hacking — Cryptography</h4></div>
+        <div class="cert-body"><span class="cert-issuer">Simplilearn ↗</span><h4>Ethical Hacking — Cryptography</h4></div>
         <span class="cert-year">2024</span>
-      </div>
-      <div class="cert-glass reveal-up" style="--delay:0.5s">
+      </a>
+
+      <a href="https://www.simplilearn.com/introduction-to-cyber-security-free-course-skillup" target="_blank" class="cert-glass reveal-up" style="--delay:0.5s">
         <div class="cert-icon"><i class="fa-solid fa-lock"></i></div>
-        <div class="cert-body"><span class="cert-issuer">Simplilearn</span><h4>Introduction to Cybersecurity</h4></div>
+        <div class="cert-body"><span class="cert-issuer">Simplilearn ↗</span><h4>Introduction to Cybersecurity</h4></div>
         <span class="cert-year">2024</span>
-      </div>
-      <div class="cert-glass reveal-up" style="--delay:0.6s">
+      </a>
+
+      <a href="https://www.simplilearn.com/generative-ai-free-course-skillup" target="_blank" class="cert-glass reveal-up" style="--delay:0.6s">
         <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
-        <div class="cert-body"><span class="cert-issuer">Simplilearn</span><h4>Research with AI &amp; Creative AI</h4></div>
+        <div class="cert-body"><span class="cert-issuer">Simplilearn ↗</span><h4>Research with AI &amp; Creative AI</h4></div>
         <span class="cert-year">2024–25</span>
-      </div>
+      </a>
+
     </div>
 
     <!-- Areas of Interest -->
     <div class="interests-wrap">
       <h3 class="activities-title">Areas of <em>Interest</em></h3>
       <div class="interests-row">
-        <span class="interest-pill"><i class="fa-solid fa-skull-crossbones"></i> Ethical Hacking</span>
-        <span class="interest-pill"><i class="fa-solid fa-magnifying-glass"></i> Penetration Testing</span>
-        <span class="interest-pill"><i class="fa-solid fa-network-wired"></i> Network Security</span>
-        <span class="interest-pill"><i class="fa-solid fa-cloud"></i> Cloud Security</span>
-        <span class="interest-pill"><i class="fa-solid fa-brain"></i> Generative AI</span>
-        <span class="interest-pill"><i class="fa-solid fa-shield-halved"></i> AI in Threat Detection</span>
+        <a href="https://www.eccouncil.org/ethical-hacking/" target="_blank" class="interest-pill"><i class="fa-solid fa-skull-crossbones"></i> Ethical Hacking ↗</a>
+        <a href="https://www.offensive-security.com" target="_blank" class="interest-pill"><i class="fa-solid fa-magnifying-glass"></i> Penetration Testing ↗</a>
+        <a href="https://www.cisco.com/c/en/us/products/security/what-is-network-security.html" target="_blank" class="interest-pill"><i class="fa-solid fa-network-wired"></i> Network Security ↗</a>
+        <a href="https://cloud.google.com/security" target="_blank" class="interest-pill"><i class="fa-solid fa-cloud"></i> Cloud Security ↗</a>
+        <a href="https://gemini.google.com" target="_blank" class="interest-pill"><i class="fa-solid fa-brain"></i> Generative AI ↗</a>
+        <a href="https://www.crowdstrike.com/cybersecurity-101/threat-intelligence/" target="_blank" class="interest-pill"><i class="fa-solid fa-shield-halved"></i> AI in Threat Detection ↗</a>
       </div>
     </div>
 
@@ -359,50 +456,66 @@
     <div class="activities-wrap">
       <h3 class="activities-title">Activities &amp; <em>Leadership</em></h3>
       <div class="activities-grid">
-        <div class="activity-glass reveal-up" style="--delay:0s">
+        <a href="https://gdg.community.dev" target="_blank" class="activity-glass reveal-up" style="--delay:0s">
           <i class="fa-solid fa-people-group"></i>
-          <p>Active member of <strong>GDG OC UVPCE</strong> — participated in Cloud Study Jams and tech events</p>
-        </div>
-        <div class="activity-glass reveal-up" style="--delay:0.15s">
+          <p>Active member of <strong>GDG OC UVPCE ↗</strong> — participated in Cloud Study Jams and tech events</p>
+        </a>
+        <a href="https://www.talerang.com" target="_blank" class="activity-glass reveal-up" style="--delay:0.15s">
           <i class="fa-solid fa-briefcase"></i>
-          <p>Completed <strong>Campus to Corporate Program</strong> by Talerang</p>
-        </div>
-        <div class="activity-glass reveal-up" style="--delay:0.3s">
+          <p>Completed <strong>Campus to Corporate Program ↗</strong> by Talerang</p>
+        </a>
+        <a href="https://www.simplilearn.com" target="_blank" class="activity-glass reveal-up" style="--delay:0.3s">
           <i class="fa-solid fa-book-open"></i>
-          <p>Regular learner on <strong>Simplilearn</strong>, Coursera &amp; Google Cloud platforms</p>
-        </div>
+          <p>Regular learner on <strong>Simplilearn ↗</strong>, Coursera &amp; Google Cloud platforms</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ═══════ CONTACT ═══════ -->
   <section class="contact section-fade" id="contact">
     <div class="section-header">
       <span class="section-num">05</span>
       <h2 class="section-title">Get In <em>Touch</em></h2>
       <div class="section-line"></div>
     </div>
-    <p class="contact-intro">Interested in internship collaboration, a project, or just want to say hello? I'm always open to connect!</p>
+    <p class="contact-intro">Interested in internship collaboration or a project? Click any option below to reach me directly!</p>
 
     <div class="contact-layout">
       <div class="contact-left reveal-left">
-        <div class="contact-item glass-card-sm">
+
+        <!-- Each contact card directly opens the platform -->
+        <a href="https://www.linkedin.com/in/dev-mistri-8181b2330/?skipRedirect=true" target="_blank" class="contact-item glass-card-sm">
           <div class="ci-icon"><i class="fa-brands fa-linkedin"></i></div>
-          <div class="ci-text"><span>LinkedIn</span><strong>linkedin.com/in/devmistri</strong></div>
-        </div>
-        <div class="contact-item glass-card-sm">
+          <div class="ci-text"><span>LinkedIn — Click to Visit ↗</span><strong>linkedin.com/in/dev-mistri</strong></div>
+        </a>
+
+        <a href="https://mail.google.com/mail/?view=cm&to=devmistri777@gmail.com,dellworkbase@gmail.com" target="_blank" class="contact-item glass-card-sm">
+          <div class="ci-icon"><i class="fa-brands fa-google"></i></div>
+          <div class="ci-text">
+            <span>Gmail — Opens Gmail directly ↗</span>
+            <strong>devmistri777@gmail.com</strong>
+            <strong style="font-size:.78rem; opacity:.7;">dellworkbase@gmail.com</strong>
+          </div>
+        </a>
+
+        <a href="https://github.com/devmistri45" target="_blank" class="contact-item glass-card-sm">
+          <div class="ci-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="ci-text"><span>GitHub — Click to Visit ↗</span><strong>github.com/devmistri45</strong></div>
+        </a>
+
+        <a href="https://maps.google.com/?q=Gujarat,India" target="_blank" class="contact-item glass-card-sm">
           <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="ci-text"><span>Location</span><strong>Gujarat, India</strong></div>
-        </div>
-        <div class="contact-item glass-card-sm">
-          <div class="ci-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <div class="ci-text"><span>University</span><strong>Ganpat University</strong></div>
-        </div>
+          <div class="ci-text"><span>Location — Open in Maps ↗</span><strong>Gujarat, India</strong></div>
+        </a>
+
+        <!-- Social row — all clickable -->
         <div class="social-row">
-          <a href="https://linkedin.com/in/devmistri" target="_blank" class="soc-btn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" class="soc-btn"><i class="fa-brands fa-github"></i></a>
-          <a href="#" class="soc-btn"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" class="soc-btn"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/dev-mistri-8181b2330/?skipRedirect=true" target="_blank" class="soc-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/devmistri45"   target="_blank" class="soc-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://mail.google.com/mail/?view=cm&to=devmistri777@gmail.com" target="_blank" class="soc-btn" title="Gmail 1"><i class="fa-brands fa-google"></i></a>
+          <a href="https://mail.google.com/mail/?view=cm&to=dellworkbase@gmail.com" target="_blank" class="soc-btn" title="Gmail 2"><i class="fa-solid fa-envelope"></i></a>
+          <a href="Dev_s_CV.pdf" download="Dev_Mistri_CV.pdf" class="soc-btn" title="Download CV"><i class="fa-solid fa-file-arrow-down"></i></a>
         </div>
       </div>
 
@@ -429,6 +542,7 @@
           <label for="fmsg">Message</label>
           <div class="field-line"></div>
         </div>
+        <!-- Form submit opens mail client with pre-filled subject -->
         <button type="submit" class="btn-glass btn-submit">
           <span id="btnText">Send Message</span>
           <i class="fa-solid fa-paper-plane" id="btnIcon"></i>
@@ -437,11 +551,19 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ═══════ FOOTER ═══════ -->
   <footer class="footer">
     <div class="footer-inner glass-card-sm">
-      <p>Crafted by <strong>Dev Mistri</strong> · 2025</p>
-      <p class="footer-sub">B.Tech IT · Ganpat University · Gujarat, India</p>
+      <div class="footer-left">
+        <p>Crafted by <a href="https://www.linkedin.com/in/dev-mistri-8181b2330/?skipRedirect=true" target="_blank" class="footer-link">Dev Mistri</a> · 2025</p>
+        <p class="footer-sub">B.Tech IT · <a href="https://www.ganpatuniversity.ac.in" target="_blank" class="footer-link">Ganpat University</a> · Gujarat, India</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/dev-mistri-8181b2330/?skipRedirect=true" target="_blank" class="footer-soc"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/devmistri45"   target="_blank" class="footer-soc"><i class="fa-brands fa-github"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=devmistri777@gmail.com,dellworkbase@gmail.com" target="_blank" class="footer-soc"><i class="fa-brands fa-google"></i></a>
+        <a href="Dev_s_CV.pdf" download="Dev_Mistri_CV.pdf" class="footer-soc"><i class="fa-solid fa-file-arrow-down"></i></a>
+      </div>
     </div>
   </footer>
 
